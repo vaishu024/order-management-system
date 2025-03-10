@@ -37,7 +37,76 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Add Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"IPhone mini\",\r\n    \"price\":\"5600\",\r\n    \"manufacturer\":\"50f7f86b9b1b8b0015d32c4f\",\r\n    \"seller\":\"50f7f79d9b2b8b1015d30e5b\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4002/api/products/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4002",
+									"path": [
+										"api",
+										"products",
+										"add"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "302"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12e-Xh9/AmWf8fH+UKJg551VS+Oqbo8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Mar 2025 08:30:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product added Successfully\",\n    \"product\": {\n        \"name\": \"IPhone mini\",\n        \"price\": 5600,\n        \"status\": \"instock\",\n        \"manufacturer\": \"50f7f86b9b1b8b0015d32c4f\",\n        \"seller\": \"50f7f79d9b2b8b1015d30e5b\",\n        \"_id\": \"67cea33e5dfa0a8e2b406d95\",\n        \"createdAt\": \"2025-03-10T08:30:54.361Z\",\n        \"updatedAt\": \"2025-03-10T08:30:54.361Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Update Product Status",
@@ -68,7 +137,77 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Update Product Status",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"status\": \"faulty\",\r\n  \"updatedBy\": \"60f7a79a9b1b8b0115d30e5e\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4002/api/products/update-status/67ca60cb32bebe26ab3b1fc1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4002",
+									"path": [
+										"api",
+										"products",
+										"update-status",
+										"67ca60cb32bebe26ab3b1fc1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "334"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14e-bQla9DMHp7nPr99thX9+u9ofA9Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Mar 2025 08:31:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product status updated\",\n    \"product\": {\n        \"_id\": \"67ca60cb32bebe26ab3b1fc1\",\n        \"name\": \"Phone\",\n        \"price\": 3500,\n        \"status\": \"faulty\",\n        \"manufacturer\": \"60f7f76b9b1b8b0015d32e4f\",\n        \"seller\": \"60f7f79a9b1b8b1015d30e5b\",\n        \"createdAt\": \"2025-03-07T02:58:19.281Z\",\n        \"updatedAt\": \"2025-03-10T08:31:30.299Z\",\n        \"__v\": 0,\n        \"lastUpdatedBy\": \"60f7a79a9b1b8b0115d30e5e\"\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Get Faulty Products",
@@ -89,7 +228,67 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Get Faulty Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4002/api/products/faulty",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4002",
+									"path": [
+										"api",
+										"products",
+										"faulty"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "576"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"240-gzfi94oMExnk/cCzJkwpGYXk50M\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Mar 2025 08:31:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"67ca5eec32bebe26ab3b1fbd\",\n        \"name\": \"Ipad\",\n        \"price\": 2500,\n        \"status\": \"faulty\",\n        \"manufacturer\": \"60f7f76b9b1b8b0015d31e4f\",\n        \"seller\": \"60f7f79a9b1b8b1015d30e5a\",\n        \"createdAt\": \"2025-03-07T02:50:20.473Z\",\n        \"updatedAt\": \"2025-03-07T02:56:22.248Z\",\n        \"__v\": 0,\n        \"lastUpdatedBy\": \"60f7a79a9b1b8b0115d30e4e\"\n    },\n    {\n        \"_id\": \"67ca60cb32bebe26ab3b1fc1\",\n        \"name\": \"Phone\",\n        \"price\": 3500,\n        \"status\": \"faulty\",\n        \"manufacturer\": \"60f7f76b9b1b8b0015d32e4f\",\n        \"seller\": \"60f7f79a9b1b8b1015d30e5b\",\n        \"createdAt\": \"2025-03-07T02:58:19.281Z\",\n        \"updatedAt\": \"2025-03-10T08:31:30.299Z\",\n        \"__v\": 0,\n        \"lastUpdatedBy\": \"60f7a79a9b1b8b0115d30e5e\"\n    }\n]"
+						}
+					]
 				}
 			]
 		},
@@ -124,7 +323,76 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Create Order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"product\": \"67cea33e5dfa0a8e2b406d95\",\r\n  \"customer\": \"61f7d9f18f1b3c001c5f9c3b\",\r\n  \"seller\": \"62f7da5a8f1b2c001c5f9b3c\",\r\n  \"manufacturer\":\"62f7f79b9b1b8c0015d30e4d\",\r\n  \"quantity\": 4,\r\n  \"totalPrice\": 5500\r\n}\r\n\r\n\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4002/api/orders/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4002",
+									"path": [
+										"api",
+										"orders",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "314"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13a-zmS1TiqUCChArYBXkKe+oIa5R+0\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Mar 2025 08:32:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Order created successfully\",\n    \"order\": {\n        \"product\": \"67cea33e5dfa0a8e2b406d95\",\n        \"customer\": \"61f7d9f18f1b3c001c5f9c3b\",\n        \"seller\": \"62f7da5a8f1b2c001c5f9b3c\",\n        \"manufacturer\": \"62f7f79b9b1b8c0015d30e4d\",\n        \"quantity\": 4,\n        \"totalPrice\": 5500,\n        \"_id\": \"67cea3b45dfa0a8e2b406d99\",\n        \"orderDate\": \"2025-03-10T08:32:52.784Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Get All Orders",
@@ -132,7 +400,76 @@
 						"method": "GET",
 						"header": []
 					},
-					"response": []
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4002/api/orders/all-orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4002",
+									"path": [
+										"api",
+										"orders",
+										"all-orders"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'none'"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1170"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Mar 2025 08:33:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error</title>\n    </head>\n    <body>\n        <pre>SyntaxError: Unexpected end of JSON input\n            <br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)\n            <br> &nbsp; &nbsp;at createStrictSyntaxError (C:\\Users\\vaish\\Desktop\\Order-Management-System\\node_modules\\body-parser\\lib\\types\\json.js:169:10)\n            <br> &nbsp; &nbsp;at parse (C:\\Users\\vaish\\Desktop\\Order-Management-System\\node_modules\\body-parser\\lib\\types\\json.js:86:15)\n            <br> &nbsp; &nbsp;at C:\\Users\\vaish\\Desktop\\Order-Management-System\\node_modules\\body-parser\\lib\\read.js:128:18\n            <br> &nbsp; &nbsp;at AsyncResource.runInAsyncScope (node:async_hooks:203:9)\n            <br> &nbsp; &nbsp;at invokeCallback (C:\\Users\\vaish\\Desktop\\Order-Management-System\\node_modules\\raw-body\\index.js:238:16)\n            <br> &nbsp; &nbsp;at done (C:\\Users\\vaish\\Desktop\\Order-Management-System\\node_modules\\raw-body\\index.js:227:7)\n            <br> &nbsp; &nbsp;at IncomingMessage.onEnd (C:\\Users\\vaish\\Desktop\\Order-Management-System\\node_modules\\raw-body\\index.js:287:7)\n            <br> &nbsp; &nbsp;at IncomingMessage.emit (node:events:517:28)\n            <br> &nbsp; &nbsp;at endReadableNT (node:internal/streams/readable:1368:12)\n        </pre>\n    </body>\n</html>"
+						}
+					]
 				},
 				{
 					"name": "Most Ordered Products",
@@ -165,7 +502,76 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Most Ordered Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4002/api/orders/most-ordered",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4002",
+									"path": [
+										"api",
+										"orders",
+										"most-ordered"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "244"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f4-lxSxytf/wMTR6Itu+b396I1qnrg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Mar 2025 08:33:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"totalOrders\": 1,\n        \"productId\": \"67ca87afc0724083aa560719\",\n        \"productName\": \"IPad\"\n    },\n    {\n        \"totalOrders\": 1,\n        \"productId\": \"67cea33e5dfa0a8e2b406d95\",\n        \"productName\": \"IPhone mini\"\n    },\n    {\n        \"totalOrders\": 1,\n        \"productId\": \"67ca8719c0724083aa560714\",\n        \"productName\": \"IPhone\"\n    }\n]"
+						}
+					]
 				},
 				{
 					"name": "Monthly Revenue",
@@ -199,7 +605,76 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Monthly Revenue",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4002/api/orders/monthly-revenue",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4002",
+									"path": [
+										"api",
+										"orders",
+										"monthly-revenue"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "129"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"81-7XYXYYLgUFrknTjmiw8xcDCD1LY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 10 Mar 2025 08:33:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"2025-03\",\n            \"totalOrders\": 4,\n            \"totalRevenue\": 15600\n        },\n        {\n            \"_id\": null,\n            \"totalOrders\": 4,\n            \"totalRevenue\": 8100\n        }\n    ]\n}"
+						}
+					]
 				}
 			]
 		}
