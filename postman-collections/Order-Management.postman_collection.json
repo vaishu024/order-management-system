@@ -12,16 +12,61 @@
 				{
 					"name": "Add Product",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"IPhone mini\",\r\n    \"price\":\"5600\",\r\n    \"manufacturer\":\"50f7f86b9b1b8b0015d32c4f\",\r\n    \"seller\":\"50f7f79d9b2b8b1015d30e5b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4002/api/products/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"api",
+								"products",
+								"add"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Update Product Status",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"faulty\",\r\n  \"updatedBy\": \"60f7a79a9b1b8b0115d30e5e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4002/api/products/update-status/67ca60cb32bebe26ab3b1fc1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"api",
+								"products",
+								"update-status",
+								"67ca60cb32bebe26ab3b1fc1"
+							]
+						}
 					},
 					"response": []
 				},
@@ -29,7 +74,20 @@
 					"name": "Get Faulty Products",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4002/api/products/faulty",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"api",
+								"products",
+								"faulty"
+							]
+						}
 					},
 					"response": []
 				}
@@ -41,8 +99,30 @@
 				{
 					"name": "Create Order",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"product\": \"67cea33e5dfa0a8e2b406d95\",\r\n  \"customer\": \"61f7d9f18f1b3c001c5f9c3b\",\r\n  \"seller\": \"62f7da5a8f1b2c001c5f9b3c\",\r\n  \"manufacturer\":\"62f7f79b9b1b8c0015d30e4d\",\r\n  \"quantity\": 4,\r\n  \"totalPrice\": 5500\r\n}\r\n\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4002/api/orders/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"api",
+								"orders",
+								"create"
+							]
+						}
 					},
 					"response": []
 				},
@@ -56,17 +136,68 @@
 				},
 				{
 					"name": "Most Ordered Products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4002/api/orders/most-ordered",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"api",
+								"orders",
+								"most-ordered"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Monthly Revenue",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4002/api/orders/monthly-revenue",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"api",
+								"orders",
+								"monthly-revenue"
+							]
+						}
 					},
 					"response": []
 				}
